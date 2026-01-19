@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Thambi - Oru Tea</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-yellow: #FBC02D;
+            --primary-red: #D32F2F;
+            --light-bg: #F9FAFB;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #E5E7EB; /* Desktop background */
+            margin: 0;
+            color: #1F2937;
+            -webkit-tap-highlight-color: transparent;
+        }
+        .brand-shadow {
+            box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.04);
+        }
+        .brand-shadow-lg {
+            box-shadow: 0 20px 40px -10px rgba(211, 47, 47, 0.15);
+        }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        
+        .brand-gradient {
+            background: linear-gradient(135deg, #FBC02D 0%, #D32F2F 100%);
+            background-size: 200% 200%;
+            animation: gradientShift 4s ease infinite;
+        }
+
+        .splash-bg-gradient {
+            background: linear-gradient(45deg, #FBC02D, #D32F2F, #FBC02D);
+            background-size: 400% 400%;
+            animation: slowSplash 12s ease infinite;
+        }
+
+        @keyframes slowSplash {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Phone Mockup */
+        .phone-container {
+            width: 375px;
+            height: 812px;
+            background: #fff;
+            border-radius: 54px;
+            border: 12px solid #111;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 60px 120px -20px rgba(0,0,0,0.3);
+        }
+        .phone-notch {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 160px;
+            height: 32px;
+            background: #111;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+            z-index: 100;
+        }
+
+        /* Tea Glass Animation */
+        .tea-glass {
+            width: 80px;
+            height: 120px;
+            border: 3px solid rgba(255,255,255,0.6);
+            border-top: none;
+            border-radius: 0 0 16px 16px;
+            position: relative;
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(4px);
+            overflow: hidden;
+        }
+        
+        .tea-liquid {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: #6F4E37; /* Chai color */
+            height: 0%;
+            animation: fillTea 2.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+        }
+
+        .tea-liquid::before {
+            content: "";
+            position: absolute;
+            top: -5px;
+            left: 0;
+            width: 100%;
+            height: 10px;
+            background: rgba(255,255,255,0.3);
+            border-radius: 50%;
+        }
+
+        @keyframes fillTea {
+            0% { height: 0%; }
+            100% { height: 85%; }
+        }
+
+        .steam {
+            position: absolute;
+            top: -40px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 8px;
+        }
+
+        .steam-line {
+            width: 4px;
+            height: 20px;
+            background: rgba(255,255,255,0.4);
+            border-radius: 4px;
+            filter: blur(4px);
+            animation: steamAnim 2s infinite ease-in-out;
+        }
+
+        @keyframes steamAnim {
+            0% { transform: translateY(0) scaleX(1); opacity: 0; }
+            50% { opacity: 0.5; }
+            100% { transform: translateY(-40px) scaleX(2); opacity: 0; }
+        }
+
+        @keyframes pulse-soft {
+            0%, 100% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.05); opacity: 0.9; }
+        }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "recharts": "https://esm.sh/recharts@^3.6.0",
+    "react-router-dom": "https://esm.sh/react-router-dom@^7.12.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body>
+    <div id="root"></div>
+<script type="module" src="/index.tsx"></script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+{
+  "name": "Thambi Oru Tea - Digital Platform",
+  "description": "A comprehensive digital platform for Thambi - Oru Tea including Customer App, Driver App, and Admin CRM with real-time tracking, order management, and AI integration.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone",
+    "geolocation"
+  ]
+}
