@@ -15,12 +15,13 @@ const SplashScreen: React.FC<{ onFinish: () => void }> = ({ onFinish }) => {
 
   return (
     //gg bortuer thngs
+    //alfa beta
     <div className="fixed inset-0 z-[999] splash-bg-gradient flex flex-col items-center justify-center p-8 transition-all duration-1000">
       <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-40">
         <div className="absolute top-[10%] left-[5%] w-64 h-64 bg-white/20 rounded-full blur-[80px] animate-pulse"></div>
         <div className="absolute bottom-[15%] right-[10%] w-80 h-80 bg-white/10 rounded-full blur-[100px] animate-pulse"></div>
       </div>
-
+       
       <div className="relative z-10 flex flex-col items-center">
         {/* Animated Tea Glass Container */}
         <div className="mb-12 relative">
@@ -89,6 +90,7 @@ const MainContent: React.FC = () => {
       <Route path="/" element={<Navigate to="/login" replace />} />
     </Routes>
   );
+  //ggchchcyfyfx
 };
 
 const App: React.FC = () => {
