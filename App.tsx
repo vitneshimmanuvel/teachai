@@ -15,6 +15,7 @@ const SplashScreen: React.FC<{ onFinish: () => void }> = ({ onFinish }) => {
 
   return (
     //gg bortuer thngs
+    //alfa beta
     <div className="fixed inset-0 z-[999] splash-bg-gradient flex flex-col items-center justify-center p-8 transition-all duration-1000">
       <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-40">
         <div className="absolute top-[10%] left-[5%] w-64 h-64 bg-white/20 rounded-full blur-[80px] animate-pulse"></div>
