@@ -7,7 +7,7 @@ interface MapViewProps {
   onVehicleClick?: (v: Vehicle) => void;
   className?: string;
 }
-
+//vzvzfdas
 const MapView: React.FC<MapViewProps> = ({ vehicles, onVehicleClick, className = "h-64" }) => {
   return (
     <div className={`relative bg-blue-50 rounded-2xl overflow-hidden border-2 border-gray-100 ${className}`}>
